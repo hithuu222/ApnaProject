@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20211124 11:18:16.429" rpa="false" schemaversion="2">
+<suite id="s1" name="Apna" source="C:\Users\user\PycharmProjects\Apna\Tests\apna.robot">
+<test id="s1-t1" name="Launch the apna application and fill user details">
+<kw name="Opens apna application" library="apna app">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${URL}</arg>
+<arg>platformName=${Platform_Name}</arg>
+<arg>platformVersion=${Platform_Version}</arg>
+<arg>deviceName=${Device_Name}</arg>
+<arg>app=${app_path}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20211124 11:18:17.153" endtime="20211124 11:18:39.499"/>
+</kw>
+<status status="PASS" starttime="20211124 11:18:17.151" endtime="20211124 11:18:39.500"/>
+</kw>
+<kw name="Select None of the above option" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Continue with</arg>
+<arg>timeout=40s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:18:39.512" endtime="20211124 11:18:43.520"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>NONE OF THE ABOVE</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:18:43.521" endtime="20211124 11:18:45.099"/>
+</kw>
+<status status="PASS" starttime="20211124 11:18:39.511" endtime="20211124 11:18:45.099"/>
+</kw>
+<kw name="Then Enter mobile number and click next" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${mobile}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:18:45.133" endtime="20211124 11:18:47.726"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${mobile}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:18:47.727" endtime="20211124 11:18:48.436"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${mobile number}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:18:48.438" endtime="20211124 11:18:48.561"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${mobile number}</arg>
+<arg>${number}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:18:48.571" level="INFO">Typing text '9872360754' into text field 'com.apnatime.debug:id/et_login_number'</msg>
+<status status="PASS" starttime="20211124 11:18:48.561" endtime="20211124 11:18:49.686"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${next}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:18:49.701" level="INFO">Clicking element 'com.apnatime.debug:id/btn_send'.</msg>
+<status status="PASS" starttime="20211124 11:18:49.686" endtime="20211124 11:18:50.281"/>
+</kw>
+<status status="PASS" starttime="20211124 11:18:45.132" endtime="20211124 11:18:50.281"/>
+</kw>
+<kw name="Enter the otp and click next" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${otp}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:18:50.283" endtime="20211124 11:18:53.970"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp_1}</arg>
+<arg>${otp number_1}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:18:53.976" level="INFO">Typing text '9' into text field 'com.apnatime.debug:id/et_otp1'</msg>
+<status status="PASS" starttime="20211124 11:18:53.970" endtime="20211124 11:18:54.796"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp_2}</arg>
+<arg>${otp number_2}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:18:54.803" level="INFO">Typing text '6' into text field 'com.apnatime.debug:id/et_otp2'</msg>
+<status status="PASS" starttime="20211124 11:18:54.796" endtime="20211124 11:18:55.759"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp_3}</arg>
+<arg>${otp number_3}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:18:55.768" level="INFO">Typing text '2' into text field 'com.apnatime.debug:id/et_otp3'</msg>
+<status status="PASS" starttime="20211124 11:18:55.759" endtime="20211124 11:18:56.753"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${otp_4}</arg>
+<arg>${otp_number_4}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:18:56.762" level="INFO">Typing text '5' into text field 'com.apnatime.debug:id/et_otp4'</msg>
+<status status="PASS" starttime="20211124 11:18:56.753" endtime="20211124 11:18:57.852"/>
+</kw>
+<status status="PASS" starttime="20211124 11:18:50.282" endtime="20211124 11:18:57.852"/>
+</kw>
+<status status="PASS" starttime="20211124 11:18:17.151" endtime="20211124 11:18:57.853"/>
+</test>
+<test id="s1-t2" name="Then Choose language of your choice and proceed">
+<kw name="Then Choose language and give next" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${choose language}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:18:57.859" endtime="20211124 11:19:06.046"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${language}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:19:06.046" endtime="20211124 11:19:07.233"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${continue}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:07.242" level="INFO">Clicking element 'com.apnatime.debug:id/btn_continue'.</msg>
+<status status="PASS" starttime="20211124 11:19:07.234" endtime="20211124 11:19:07.998"/>
+</kw>
+<status status="PASS" starttime="20211124 11:18:57.858" endtime="20211124 11:19:07.999"/>
+</kw>
+<kw name="Enter Visiting card details by clicking letsgo option" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${lets go}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:08.001" endtime="20211124 11:19:11.550"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${lets go}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:19:11.551" endtime="20211124 11:19:11.890"/>
+</kw>
+<status status="PASS" starttime="20211124 11:19:08.000" endtime="20211124 11:19:11.891"/>
+</kw>
+<status status="PASS" starttime="20211124 11:18:57.856" endtime="20211124 11:19:11.901"/>
+</test>
+<test id="s1-t3" name="Then Enter the required personal details and proceed">
+<kw name="Then Enter personal details and click next" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${visiting card}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:11.930" endtime="20211124 11:19:15.772"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${name}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:19:15.772" endtime="20211124 11:19:16.196"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${enter name}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:16.196" endtime="20211124 11:19:16.451"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${enter name}</arg>
+<arg>${full name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:16.464" level="INFO">Typing text 'Hitha' into text field 'com.apnatime.debug:id/act_profile_info_et_full_name'</msg>
+<status status="PASS" starttime="20211124 11:19:16.451" endtime="20211124 11:19:17.200"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${city}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:17.212" level="INFO">Clicking element 'com.apnatime.debug:id/act_profile_info_et_city'.</msg>
+<status status="PASS" starttime="20211124 11:19:17.200" endtime="20211124 11:19:17.805"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${search box}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:17.805" endtime="20211124 11:19:21.658"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${enter city}</arg>
+<arg>${search city}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:21.666" level="INFO">Typing text 'Ben' into text field 'com.apnatime.debug:id/search_src_text'</msg>
+<status status="PASS" starttime="20211124 11:19:21.658" endtime="20211124 11:19:22.608"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${enter city}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:22.608" endtime="20211124 11:19:22.752"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${city name}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:19:22.753" endtime="20211124 11:19:23.416"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${location}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:23.416" endtime="20211124 11:19:25.333"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${location}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:25.346" level="INFO">Clicking element 'com.apnatime.debug:id/act_profile_info_et_location'.</msg>
+<status status="PASS" starttime="20211124 11:19:25.334" endtime="20211124 11:19:26.287"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${enter location}</arg>
+<arg>timeout=40s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:26.288" endtime="20211124 11:19:28.194"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${enter location}</arg>
+<arg>${location name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:28.205" level="INFO">Typing text 'Jaya' into text field 'com.apnatime.debug:id/act_select_location_etSearchLocation'</msg>
+<status status="PASS" starttime="20211124 11:19:28.194" endtime="20211124 11:19:29.439"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${select location}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:29.440" endtime="20211124 11:19:30.825"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${select location}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:19:30.826" endtime="20211124 11:19:32.389"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${gender}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:32.390" endtime="20211124 11:19:32.581"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${gender}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:32.590" level="INFO">Clicking element 'com.apnatime.debug:id/iv_female_tick'.</msg>
+<status status="PASS" starttime="20211124 11:19:32.581" endtime="20211124 11:19:32.746"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${proceed}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:32.748" endtime="20211124 11:19:33.425"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${proceed}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:33.433" level="INFO">Clicking element 'com.apnatime.debug:id/act_profile_info_btn_continue'.</msg>
+<status status="PASS" starttime="20211124 11:19:33.425" endtime="20211124 11:19:33.522"/>
+</kw>
+<status status="PASS" starttime="20211124 11:19:11.929" endtime="20211124 11:19:33.523"/>
+</kw>
+<status status="PASS" starttime="20211124 11:19:11.926" endtime="20211124 11:19:33.524"/>
+</test>
+<test id="s1-t4" name="Select Work Experience and give education details and proceed">
+<kw name="Select Work Experience and click next" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${experience}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20211124 11:19:33.531" endtime="20211124 11:19:36.836"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${experience}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:19:36.836" endtime="20211124 11:19:37.721"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${select experience}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:37.731" level="INFO">Clicking element 'com.apnatime.debug:id/act_education_et_total_exp'.</msg>
+<status status="PASS" starttime="20211124 11:19:37.721" endtime="20211124 11:19:38.431"/>
+</kw>
+<kw name="Click Element At Coordinates" library="AppiumLibrary">
+<arg>429</arg>
+<arg>563</arg>
+<doc>click element at a certain coordinate</doc>
+<msg timestamp="20211124 11:19:38.451" level="INFO">Pressing at (429, 563).</msg>
+<status status="PASS" starttime="20211124 11:19:38.431" endtime="20211124 11:19:39.495"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${job title}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:39.505" level="INFO">Clicking element 'com.apnatime.debug:id/act_profile_info_et_job_title'.</msg>
+<status status="PASS" starttime="20211124 11:19:39.496" endtime="20211124 11:19:39.596"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${job title}</arg>
+<arg>${job name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:39.607" level="INFO">Typing text 'Software Tester' into text field 'com.apnatime.debug:id/act_profile_info_et_job_title'</msg>
+<status status="PASS" starttime="20211124 11:19:39.596" endtime="20211124 11:19:41.688"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${company}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:41.698" level="INFO">Clicking element 'com.apnatime.debug:id/act_profile_info_et_company_name'.</msg>
+<status status="PASS" starttime="20211124 11:19:41.688" endtime="20211124 11:19:43.182"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${company}</arg>
+<arg>${company name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:43.201" level="INFO">Typing text 'Moolya Projects' into text field 'com.apnatime.debug:id/act_profile_info_et_company_name'</msg>
+<status status="PASS" starttime="20211124 11:19:43.183" endtime="20211124 11:19:45.229"/>
+</kw>
+<kw name="Get Element Location" library="AppiumLibrary">
+<var>${element_location}</var>
+<arg>${salary}</arg>
+<doc>Get element location</doc>
+<msg timestamp="20211124 11:19:45.887" level="INFO">Element 'com.apnatime.debug:id/act_education_seekbar_salary' location: {'x': 36, 'y': 1384} </msg>
+<msg timestamp="20211124 11:19:45.887" level="INFO">${element_location} = {'x': 36, 'y': 1384}</msg>
+<status status="PASS" starttime="20211124 11:19:45.230" endtime="20211124 11:19:45.888"/>
+</kw>
+<kw name="Get Element Size" library="AppiumLibrary">
+<var>${element_size}</var>
+<arg>${salary}</arg>
+<doc>Get element size</doc>
+<msg timestamp="20211124 11:19:46.007" level="INFO">Element 'com.apnatime.debug:id/act_education_seekbar_salary' size: {'height': 72, 'width': 963} </msg>
+<msg timestamp="20211124 11:19:46.007" level="INFO">${element_size} = {'height': 72, 'width': 963}</msg>
+<status status="PASS" starttime="20211124 11:19:45.888" endtime="20211124 11:19:46.007"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.6)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211124 11:19:46.012" level="INFO">${start_x} = 613.8</msg>
+<status status="PASS" starttime="20211124 11:19:46.007" endtime="20211124 11:19:46.012"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${start_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.8)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211124 11:19:46.019" level="INFO">${start_y} = 1441.6</msg>
+<status status="PASS" starttime="20211124 11:19:46.012" endtime="20211124 11:19:46.019"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_x}</var>
+<arg>${element_location['x']} + (${element_size['width']} * 0.6)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211124 11:19:46.024" level="INFO">${end_x} = 613.8</msg>
+<status status="PASS" starttime="20211124 11:19:46.019" endtime="20211124 11:19:46.024"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${end_y}</var>
+<arg>${element_location['y']} + (${element_size['height']} * 0.5)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211124 11:19:46.030" level="INFO">${end_y} = 1420.0</msg>
+<status status="PASS" starttime="20211124 11:19:46.025" endtime="20211124 11:19:46.030"/>
+</kw>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${start_x}</arg>
+<arg>${start_y}</arg>
+<arg>${end_x}</arg>
+<arg>${end_y}</arg>
+<arg>400</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20211124 11:19:46.030" endtime="20211124 11:19:47.227"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${work}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20211124 11:19:47.228" endtime="20211124 11:19:48.068"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${go}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211124 11:19:48.076" level="INFO">Clicking element 'com.apnatime.debug:id/act_education_btn_continue'.</msg>
+<status status="PASS" starttime="20211124 11:19:48.069" endtime="20211124 11:19:48.172"/>
+</kw>
+<status status="PASS" starttime="20211124 11:19:33.530" endtime="20211124 11:19:48.172"/>
+</kw>
+<kw name="Then Enter education details and click next" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${education}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<msg timestamp="20211124 11:20:18.663" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2148"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2148]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2148]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2148]" displayed="true"&gt;
+        &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/decor_content_parent" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2148]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="com.apnatime.debug:id/action_bar_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,220]" displayed="true"&gt;
+            &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/action_bar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,220]" displayed="true"&gt;
+              &lt;android.widget.ImageButton index="0" package="com.apnatime.debug" class="android.widget.ImageButton" text="" content-desc="Navigate up" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][154,220]" displayed="true" /&gt;
+              &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="apna" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[198,91][347,194]" displayed="true" /&gt;
+            &lt;/android.view.ViewGroup&gt;
+          &lt;/android.widget.FrameLayout&gt;
+          &lt;android.widget.FrameLayout index="1" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,2148]" displayed="true"&gt;
+            &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/clRootEducation" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,2148]" displayed="true"&gt;
+              &lt;android.widget.ScrollView index="0" package="com.apnatime.debug" class="android.widget.ScrollView" text="" resource-id="com.apnatime.debug:id/act_education_scrollview" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,220][1080,1944]" displayed="true"&gt;
+                &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,1944]" displayed="true"&gt;
+                  &lt;android.view.View index="0" package="com.apnatime.debug" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,750]" displayed="true" /&gt;
+                  &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="Let us make your visiting card" resource-id="com.apnatime.debug:id/act_education_tv_title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,268][1080,371]" displayed="true" /&gt;
+                  &lt;android.widget.LinearLayout index="2" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_visitingcard" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[29,382][1051,954]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[29,382][1051,954]" displayed="true"&gt;
+                      &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="com.apnatime.debug:id/row_car_card_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][1008,937]" displayed="true"&gt;
+                        &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][1008,937]" displayed="true"&gt;
+                          &lt;android.view.View index="0" package="com.apnatime.debug" class="android.view.View" text="" resource-id="com.apnatime.debug:id/row_card_ll_take_picture" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][353,937]" displayed="true" /&gt;
+                          &lt;android.widget.ImageView index="1" package="com.apnatime.debug" class="android.widget.ImageView" text="" resource-id="com.apnatime.debug:id/row_card_img_profile" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][353,937]" displayed="true" /&gt;
+                          &lt;android.view.View index="2" package="com.apnatime.debug" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[353,399][1008,937]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="3" package="com.apnatime.debug" class="android.widget.TextView" text="Hitha" resource-id="com.apnatime.debug:id/row_card_tv_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[359,523][925,583]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="4" package="com.apnatime.debug" class="android.widget.TextView" text="Software Tester at Moolya Projects" resource-id="com.apnatime.debug:id/row_card_tv_job_desc" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[410,583][925,671]" displayed="true" /&gt;
+                          &lt;android.view.ViewGroup index="5" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/education_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[571,682][925,726]" displayed="true"&gt;
+                            &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="1 year" resource-id="com.apnatime.debug:id/row_card_tv_experience" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[828,682][925,726]" displayed="true" /&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                          &lt;android.widget.FrameLayout index="6" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="com.apnatime.debug:id/frame" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[353,842][1008,937]" displayed="true"&gt;
+                            &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="Bengaluru" resource-id="com.apnatime.debug:id/row_card_tv_mobile" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[692,864][964,915]" displayed="true" /&gt;
+                          &lt;/android.widget.FrameLayout&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                      &lt;/android.widget.FrameLayout&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.TextView index="3" package="com.apnatime.debug" class="android.widget.TextView" text="Do you have any work experience?" resource-id="com.apnatime.debug:id/act_education_tv_select_one" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[202,1040][878,1106]" displayed="true" /&gt;
+                  &lt;android.widget.Button index="4" package="com.apnatime.debug" class="android.widget.Button" text="YES" resource-id="com.apnatime.debug:id/act_education_btn_experience" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[259,1149][540,1284]" displayed="true" /&gt;
+                  &lt;android.widget.Button index="5" package="com.apnatime.debug" class="android.widget.Button" text="NO" resource-id="com.apnatime.debug:id/act_education_btn_fresher" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[555,1149][821,1284]" displayed="true" /&gt;
+                  &lt;android.widget.LinearLayout index="6" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_input_layout_exp" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1320][999,1438]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1335][999,1438]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.apnatime.debug" class="android.widget.EditText" text="1 year" resource-id="com.apnatime.debug:id/act_education_et_total_exp" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[72,1335][999,1438]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="7" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_input_layout_job_title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1474][999,1592]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1489][999,1592]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.apnatime.debug" class="android.widget.EditText" text="Software Tester" resource-id="com.apnatime.debug:id/act_profile_info_et_job_title" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[72,1489][999,1592]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="8" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_input_layout_company_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1628][999,1746]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1643][999,1746]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.apnatime.debug" class="android.widget.EditText" text="Moolya Projects" resource-id="com.apnatime.debug:id/act_profile_info_et_company_name" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="true" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[72,1643][999,1746]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.view.ViewGroup index="9" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/act_education_cl_salary" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1782][999,1938]" displayed="true"&gt;
+                    &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="Current monthly salary" resource-id="com.apnatime.debug:id/act_education_tv_salary_title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1782][810,1848]" displayed="true" /&gt;
+                    &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="₹30,500" resource-id="com.apnatime.debug:id/act_education_tv_salary" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[810,1782][963,1847]" displayed="true" /&gt;
+                    &lt;android.widget.SeekBar index="2" package="com.apnatime.debug" class="android.widget.SeekBar" text="30762.0" resource-id="com.apnatime.debug:id/act_education_seekbar_salary" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[36,1866][999,1938]" displayed="true" /&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.view.ViewGroup&gt;
+              &lt;/android.widget.ScrollView&gt;
+              &lt;androidx.appcompat.widget.LinearLayoutCompat index="1" package="com.apnatime.debug" class="androidx.appcompat.widget.LinearLayoutCompat" text="" resource-id="com.apnatime.debug:id/ll_error_message" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,291]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="Error updating profile. Please try again." resource-id="com.apnatime.debug:id/tv_error_message" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,291]" displayed="true" /&gt;
+              &lt;/androidx.appcompat.widget.LinearLayoutCompat&gt;
+              &lt;android.widget.Button index="2" package="com.apnatime.debug" class="android.widget.Button" text="Next" resource-id="com.apnatime.debug:id/act_education_btn_continue" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1944][1008,2076]" displayed="true" /&gt;
+            &lt;/android.view.ViewGroup&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.view.ViewGroup&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211124 11:20:19.368" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211124 11:20:18.666" endtime="20211124 11:20:19.368"/>
+</kw>
+<msg timestamp="20211124 11:20:19.370" level="FAIL">Text 'com.apnatime.debug:id/et_education' did not appear in 30 seconds</msg>
+<status status="FAIL" starttime="20211124 11:19:48.187" endtime="20211124 11:20:19.370"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${education}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.370" endtime="20211124 11:20:19.370"/>
+</kw>
+<kw name="Click Element At Coordinates" library="AppiumLibrary">
+<arg>179</arg>
+<arg>1796</arg>
+<doc>click element at a certain coordinate</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.371" endtime="20211124 11:20:19.371"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${degree}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.371" endtime="20211124 11:20:19.371"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${degree}</arg>
+<arg>${degree name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.371" endtime="20211124 11:20:19.371"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${search degree}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.371" endtime="20211124 11:20:19.371"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${search degree}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.372" endtime="20211124 11:20:19.372"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${college}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.372" endtime="20211124 11:20:19.372"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${college}</arg>
+<arg>${college name}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.372" endtime="20211124 11:20:19.372"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${search college}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.372" endtime="20211124 11:20:19.372"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${search college}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.372" endtime="20211124 11:20:19.372"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${move}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:19.372" endtime="20211124 11:20:19.373"/>
+</kw>
+<status status="FAIL" starttime="20211124 11:19:48.187" endtime="20211124 11:20:19.374"/>
+</kw>
+<status status="FAIL" starttime="20211124 11:19:33.529" endtime="20211124 11:20:19.375">Text 'com.apnatime.debug:id/et_education' did not appear in 30 seconds</status>
+</test>
+<test id="s1-t5" name="Choose the desired job category,gallary,contact details and proceed">
+<kw name="Choose job category and give next" library="apna app">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${choose category}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<msg timestamp="20211124 11:20:50.511" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2148"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2148]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2148]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2148]" displayed="true"&gt;
+        &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/decor_content_parent" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2148]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="com.apnatime.debug:id/action_bar_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,220]" displayed="true"&gt;
+            &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/action_bar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,220]" displayed="true"&gt;
+              &lt;android.widget.ImageButton index="0" package="com.apnatime.debug" class="android.widget.ImageButton" text="" content-desc="Navigate up" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][154,220]" displayed="true" /&gt;
+              &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="apna" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[198,91][347,194]" displayed="true" /&gt;
+            &lt;/android.view.ViewGroup&gt;
+          &lt;/android.widget.FrameLayout&gt;
+          &lt;android.widget.FrameLayout index="1" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,2148]" displayed="true"&gt;
+            &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/clRootEducation" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,2148]" displayed="true"&gt;
+              &lt;android.widget.ScrollView index="0" package="com.apnatime.debug" class="android.widget.ScrollView" text="" resource-id="com.apnatime.debug:id/act_education_scrollview" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,220][1080,1944]" displayed="true"&gt;
+                &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,1944]" displayed="true"&gt;
+                  &lt;android.view.View index="0" package="com.apnatime.debug" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,750]" displayed="true" /&gt;
+                  &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="Let us make your visiting card" resource-id="com.apnatime.debug:id/act_education_tv_title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,268][1080,371]" displayed="true" /&gt;
+                  &lt;android.widget.LinearLayout index="2" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_visitingcard" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[29,382][1051,954]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[29,382][1051,954]" displayed="true"&gt;
+                      &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="com.apnatime.debug:id/row_car_card_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][1008,937]" displayed="true"&gt;
+                        &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][1008,937]" displayed="true"&gt;
+                          &lt;android.view.View index="0" package="com.apnatime.debug" class="android.view.View" text="" resource-id="com.apnatime.debug:id/row_card_ll_take_picture" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][353,937]" displayed="true" /&gt;
+                          &lt;android.widget.ImageView index="1" package="com.apnatime.debug" class="android.widget.ImageView" text="" resource-id="com.apnatime.debug:id/row_card_img_profile" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,399][353,937]" displayed="true" /&gt;
+                          &lt;android.view.View index="2" package="com.apnatime.debug" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[353,399][1008,937]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="3" package="com.apnatime.debug" class="android.widget.TextView" text="Hitha" resource-id="com.apnatime.debug:id/row_card_tv_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[359,523][925,583]" displayed="true" /&gt;
+                          &lt;android.widget.TextView index="4" package="com.apnatime.debug" class="android.widget.TextView" text="Software Tester at Moolya Projects" resource-id="com.apnatime.debug:id/row_card_tv_job_desc" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[410,583][925,671]" displayed="true" /&gt;
+                          &lt;android.view.ViewGroup index="5" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/education_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[571,682][925,726]" displayed="true"&gt;
+                            &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="1 year" resource-id="com.apnatime.debug:id/row_card_tv_experience" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[828,682][925,726]" displayed="true" /&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                          &lt;android.widget.FrameLayout index="6" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="com.apnatime.debug:id/frame" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[353,842][1008,937]" displayed="true"&gt;
+                            &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="Bengaluru" resource-id="com.apnatime.debug:id/row_card_tv_mobile" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[692,864][964,915]" displayed="true" /&gt;
+                          &lt;/android.widget.FrameLayout&gt;
+                        &lt;/android.view.ViewGroup&gt;
+                      &lt;/android.widget.FrameLayout&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.TextView index="3" package="com.apnatime.debug" class="android.widget.TextView" text="Do you have any work experience?" resource-id="com.apnatime.debug:id/act_education_tv_select_one" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[202,1040][878,1106]" displayed="true" /&gt;
+                  &lt;android.widget.Button index="4" package="com.apnatime.debug" class="android.widget.Button" text="YES" resource-id="com.apnatime.debug:id/act_education_btn_experience" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[259,1149][540,1284]" displayed="true" /&gt;
+                  &lt;android.widget.Button index="5" package="com.apnatime.debug" class="android.widget.Button" text="NO" resource-id="com.apnatime.debug:id/act_education_btn_fresher" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[555,1149][821,1284]" displayed="true" /&gt;
+                  &lt;android.widget.LinearLayout index="6" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_input_layout_exp" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1320][999,1438]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1335][999,1438]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.apnatime.debug" class="android.widget.EditText" text="1 year" resource-id="com.apnatime.debug:id/act_education_et_total_exp" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[72,1335][999,1438]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="7" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_input_layout_job_title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1474][999,1592]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1489][999,1592]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.apnatime.debug" class="android.widget.EditText" text="Software Tester" resource-id="com.apnatime.debug:id/act_profile_info_et_job_title" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[72,1489][999,1592]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.widget.LinearLayout index="8" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" resource-id="com.apnatime.debug:id/act_education_input_layout_company_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1628][999,1746]" displayed="true"&gt;
+                    &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1643][999,1746]" displayed="true"&gt;
+                      &lt;android.widget.EditText index="0" package="com.apnatime.debug" class="android.widget.EditText" text="Moolya Projects" resource-id="com.apnatime.debug:id/act_profile_info_et_company_name" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="true" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[72,1643][999,1746]" displayed="true" /&gt;
+                    &lt;/android.widget.FrameLayout&gt;
+                  &lt;/android.widget.LinearLayout&gt;
+                  &lt;android.view.ViewGroup index="9" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/act_education_cl_salary" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1782][999,1938]" displayed="true"&gt;
+                    &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="Current monthly salary" resource-id="com.apnatime.debug:id/act_education_tv_salary_title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1782][810,1848]" displayed="true" /&gt;
+                    &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="₹30,500" resource-id="com.apnatime.debug:id/act_education_tv_salary" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[810,1782][963,1847]" displayed="true" /&gt;
+                    &lt;android.widget.SeekBar index="2" package="com.apnatime.debug" class="android.widget.SeekBar" text="30762.0" resource-id="com.apnatime.debug:id/act_education_seekbar_salary" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[36,1866][999,1938]" displayed="true" /&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.view.ViewGroup&gt;
+              &lt;/android.widget.ScrollView&gt;
+              &lt;androidx.appcompat.widget.LinearLayoutCompat index="1" package="com.apnatime.debug" class="androidx.appcompat.widget.LinearLayoutCompat" text="" resource-id="com.apnatime.debug:id/ll_error_message" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,291]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="Error updating profile. Please try again." resource-id="com.apnatime.debug:id/tv_error_message" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,220][1080,291]" displayed="true" /&gt;
+              &lt;/androidx.appcompat.widget.LinearLayoutCompat&gt;
+              &lt;android.widget.Button index="2" package="com.apnatime.debug" class="android.widget.Button" text="Next" resource-id="com.apnatime.debug:id/act_education_btn_continue" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,1944][1008,2076]" displayed="true" /&gt;
+            &lt;/android.view.ViewGroup&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.view.ViewGroup&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211124 11:20:51.306" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211124 11:20:50.512" endtime="20211124 11:20:51.306"/>
+</kw>
+<msg timestamp="20211124 11:20:51.307" level="FAIL">Text 'Choose from Other available categories' did not appear in 30 seconds</msg>
+<status status="FAIL" starttime="20211124 11:20:19.378" endtime="20211124 11:20:51.307"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${category}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:51.308" endtime="20211124 11:20:51.308"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${category name}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:51.308" endtime="20211124 11:20:51.309"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${category name}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:51.309" endtime="20211124 11:20:51.309"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${select category}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:51.309" endtime="20211124 11:20:51.309"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${click next}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:51.309" endtime="20211124 11:20:51.309"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${click next}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20211124 11:20:51.310" endtime="20211124 11:20:51.310"/>
+</kw>
+<status status="FAIL" starttime="20211124 11:20:19.377" endtime="20211124 11:20:51.311"/>
+</kw>
+<kw name="Then give gallary details and click next" library="apna app">
+<status status="NOT RUN" starttime="20211124 11:20:51.312" endtime="20211124 11:20:51.312"/>
+</kw>
+<kw name="Enter contact details and give next" library="apna app">
+<status status="NOT RUN" starttime="20211124 11:20:51.312" endtime="20211124 11:20:51.312"/>
+</kw>
+<status status="FAIL" starttime="20211124 11:20:19.376" endtime="20211124 11:20:51.313">Text 'Choose from Other available categories' did not appear in 30 seconds</status>
+</test>
+<status status="FAIL" starttime="20211124 11:18:16.434" endtime="20211124 11:20:51.320"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="2" skip="0" id="s1" name="Apna">Apna</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
