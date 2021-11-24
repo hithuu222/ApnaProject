@@ -6,7 +6,7 @@ ${Device_Name}      emulator-5554
 ${app_path}     C:\\Users\\user\\PycharmProjects\\Apna\\apna-devDebug-dev-9293.apk
 ${mobile}       Your Mobile number
 ${mobile number}       com.apnatime.debug:id/et_login_number
-${number}       9872360754
+${number}       9874760784
 ${next}         com.apnatime.debug:id/btn_send
 ${otp}          Enter OTP
 ${otp_1}        com.apnatime.debug:id/et_otp1
