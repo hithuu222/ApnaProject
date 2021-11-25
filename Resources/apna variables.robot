@@ -6,7 +6,7 @@ ${Device_Name}      emulator-5554
 ${app_path}     C:\\Users\\user\\PycharmProjects\\Apna\\apna-devDebug-dev-9293.apk
 ${mobile}       Your Mobile number
 ${mobile number}       id=et_login_number
-${number}       9878620584
+${number}       9878620684
 ${next}         id=btn_send
 ${otp}          Enter OTP
 ${otp_1}        id=et_otp1
