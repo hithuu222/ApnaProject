@@ -1,7 +1,7 @@
 *** Settings ***
 Library     AppiumLibrary
-Resource    ../Resources/apna app.robot
-Resource    ../Resources/apna variables.robot
+Resource    ../Resources/apna common.robot
+
 
 
 *** Test Cases ***
