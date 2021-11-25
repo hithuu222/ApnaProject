@@ -37,14 +37,11 @@ Then Enter personal details and click next
 
     Wait for Element on Screen     ${enter name}
     Input Text   ${enter name}   ${full name}
-
-    #enter city
     Click Element   ${city}
     Wait for Element on Screen   ${search box}
     Input Text      ${enter city}    ${search city}
     Wait for Element on Screen   ${enter city}
     Click Text     ${city name}
-    #enter location
     Wait for text on Screen and click Text    ${apna}
 
 
